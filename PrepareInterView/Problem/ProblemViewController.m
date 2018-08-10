@@ -11,8 +11,8 @@
 //#import "FatherView.h"
 
 
-extern NSString *UURI;
-extern NSString *UUIR;
+//extern NSString *UURI;
+//extern NSString *UUIR;
 static NSString  * const A = @"www.rr";
 
 @interface ProblemViewController ()
@@ -30,15 +30,15 @@ static NSString  * const A = @"www.rr";
 //    *A = &uuu;
 //    A = @"dfjsdf";
   
-    UURI = @"jljljklj";
-    NSLog(@"%@",UURI);
+//    UURI = @"jljljklj";
+//    NSLog(@"%@",UURI);
 
     
     self.view.backgroundColor = [UIColor whiteColor];
     
 //    [self frameAndBounds];
     
-//    [self partViewInSuperView];
+    [self partViewInSuperView];
     
     [self arrayPro];
     
@@ -108,8 +108,6 @@ static NSString  * const A = @"www.rr";
     
     NSLog(@"%@",self.array);
 
-    
-    
 }
 
 
@@ -123,25 +121,25 @@ static NSString  * const A = @"www.rr";
     v.bounds = CGRectMake(100, 300, 50, 50);
 }
 
-//- (void)partViewInSuperView
-//{
+- (void)partViewInSuperView
+{
 //    FatherView *v = [[FatherView alloc]initWithFrame:CGRectMake(100, 300, 150, 100)];
 //    v.backgroundColor = [UIColor orangeColor];
 //    [self.view addSubview:v];
-//
-////    [v findUIViewController];
-//    
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    btn.frame = CGRectMake(0, 0, 100, 100);
-//    btn.backgroundColor = [UIColor blueColor];
-//    [v addSubview:btn];
-//    
-//    btn.center = CGPointMake(150, 0);
-//    
-//    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-//    [self findUIViewController:btn];
-//    
-//}
+
+//    [v findUIViewController];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 100, 100);
+    btn.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:btn];
+    
+    btn.center = CGPointMake(150, 0);
+    
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self findUIViewController:btn];
+    
+}
 
 - (void)findUIViewController:(id)target
 {

@@ -45,6 +45,7 @@
 		7DCADA581EF2DC0400E6E35D /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCADA571EF2DC0400E6E35D /* Dog.m */; };
 		7DCADA7E1EFEAFB300E6E35D /* DynamicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCADA7D1EFEAFB300E6E35D /* DynamicsViewController.m */; };
 		7DCADA811EFFEF7800E6E35D /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCADA801EFFEF7800E6E35D /* Animal.m */; };
+		7DD999142118A34400BB69F3 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD999132118A34400BB69F3 /* WeakProxy.m */; };
 		C1861078D7C795D09BFEA8A7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 322528D22BFBD120C46C3398 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,8 @@
 		7DCADA7D1EFEAFB300E6E35D /* DynamicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicsViewController.m; sourceTree = "<group>"; };
 		7DCADA7F1EFFEF7800E6E35D /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		7DCADA801EFFEF7800E6E35D /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		7DD999122118A34400BB69F3 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
+		7DD999132118A34400BB69F3 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,8 @@
 				7D242E371ED5D81200D22018 /* NewRunLoopScroll.m */,
 				7D4521681EE433CD0043CC98 /* NSTimer+YYBlockSupport.h */,
 				7D4521691EE433CD0043CC98 /* NSTimer+YYBlockSupport.m */,
+				7DD999122118A34400BB69F3 /* WeakProxy.h */,
+				7DD999132118A34400BB69F3 /* WeakProxy.m */,
 			);
 			path = RunLoopScroll;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				7D242DFC1ECD66FF00D22018 /* main.m in Sources */,
 				7D45214E1EDF1A170043CC98 /* Student.m in Sources */,
 				7D242E241ED323B200D22018 /* MyDrawerViewController.m in Sources */,
+				7DD999142118A34400BB69F3 /* WeakProxy.m in Sources */,
 				7D242E1C1ED2DA0A00D22018 /* DrRightViewController.m in Sources */,
 				7DCADA391EF029BC00E6E35D /* ProblemViewController.m in Sources */,
 				7D242E271ED3E54800D22018 /* DrCenterViewController.m in Sources */,

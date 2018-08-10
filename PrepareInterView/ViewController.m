@@ -10,10 +10,12 @@
 
 #import "OperationExe.h"
 
-
+#import "WeakProxy.h"
 
 
 @interface ViewController ()
+@property (strong) NSArray *aaa;
+@property (strong) NSTimer *kTimer;
 
 @end
 
@@ -31,13 +33,52 @@
 //    NSLog(@"%f",de.batteryLevel);
     
     [self reviewGCD];
-
+    [self testTimer];
 //    OperationExe *ex = [[OperationExe alloc]init];
 //    [ex nsoperation];
 //    [ex test1];
 //    [ex testThread];
+    NSMutableArray *ma = [NSMutableArray array];
+    [ma addObject:@"11"];
+    self.aaa = ma;
+    NSLog(@"before ## %@",self.aaa);
+    [ma addObject:@"222"];
+    NSLog(@"after ## %@",self.aaa);
+
+    NSString *s = @"测试";
+    NSString *tt = s.copy;
+    NSMutableString *ms = s.mutableCopy;
+    [ms appendString:@"ddd"];
+    
+    NSString * test = ms.copy;
+    
+    NSLog(@"%p --- %p -- %p -- %p", s, tt, ms, test);
+}
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+//    [self.kTimer invalidate];
+    CALayer *ca = [[CALayer alloc]init];
 }
 
+- (void)dealloc
+{
+    [self.kTimer invalidate];
+
+}
+- (void)timerItem
+{
+    NSLog(@"timer");
+
+}
+- (void)testTimer
+{
+//    self.kTimer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"timer");
+//    }];
+//
+    self.kTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:[WeakProxy proxyWithTarget:self] selector:@selector(timerItem) userInfo:nil repeats:YES];
+}
 - (void)reviewGCD
 {
     dispatch_queue_t queue;
